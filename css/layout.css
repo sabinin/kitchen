@@ -91,7 +91,7 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
-/* image */
+
 img{
     width: 100%;
     height: auto;
@@ -369,4 +369,5 @@ $breakpoint-xlarge: 1220px; // For width more than 1220px
     .ba-width-xlarge-1-6 {
         width: 16.66667%;
     }
+
 }
