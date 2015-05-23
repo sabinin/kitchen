@@ -1,0 +1,10 @@
+.gray{
+    background: gray;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}
+.ba-container{
+    padding: 20px;
+}
