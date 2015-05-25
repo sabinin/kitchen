@@ -152,11 +152,11 @@ h5{
 }
 /* --------------------description----------- */
 .description:before{
-    transform: skewY(-10deg);
-    -webkit-transform: skewY(-10deg);
-    -moz-transform: skewY(-10deg);
-    -o-transform: skewY(-10deg);
-    -ms-transform: skewY(-10deg);
+    transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
     top:0px;
 }
 .description{
@@ -201,12 +201,12 @@ h5{
 }
 /*-----------------register -----------*/
 .register:before{
-    transform: skewY(10deg);
-    -webkit-transform: skewY(10deg);
-    -moz-transform: skewY(10deg);
-    -o-transform: skewY(10deg);
-    -ms-transform: skewY(10deg);
-    top:-250px;
+    transform: skewY(5deg);
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -o-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+        top:-250px;
     z-index: 100;
 }
 .register{
