@@ -127,6 +127,7 @@ h5{
      text-transform: uppercase;
      font-family: "ProximaNovaBold";
  }
+.banner svg,
 .banner img{
     display: block;
     margin-left: auto;
