@@ -36,12 +36,7 @@
     .circle{
         display: none;
     }
-    .footer:before,
-    .testimonials:before,
-    .description:before,
-    .register:before{
-        display: none;
-    }
+
     .register{
         background-color: #2a323a;
         position: relative;
