@@ -1,10 +1,468 @@
-.gray{
-    background: gray;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
-    color: #ffffff;
+body{
+    width: 100%;
 }
-.ba-container{
-    padding: 20px;
+.wrapper{
+    max-width: 940px;
+    margin: 0 auto;
+}
+/* font-family: "ProximaNovaRegular"; */
+@font-face {
+    font-family: "ProximaNovaRegular";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "ProximaNovaBold"; */
+@font-face {
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OstrichSans Bold"; */
+@font-face {
+    font-family: "OstrichSansBold";
+    src: url("../fonts/OstrichBold/ostrich-bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "OstrichSans Black"; */
+@font-face {
+    font-family: "OstrichSansBlack";
+    src: url("../fonts/OstrichBlack/ostrich-black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "OstrichSans Medium"; */
+@font-face {
+    font-family: "OstrichSansMedium";
+    src: url("../fonts/OstrichMedium/ostrich-regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Neou"; */
+@font-face {
+    font-family: "Neou";
+    src: url("../fonts/Neou/Neou-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "Lavanderia"; */
+@font-face {
+    font-family: "Lavanderia";
+    src: url("../fonts/Lavanderia/Lavanderia Sturdy.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+/*typo*/
+h1{
+    font-size: 35px;
+}
+h3{
+    font-size: 24px;
+    line-height: 1.5;
+    text-transform: none;
+}
+.description h3{
+    font-family: "OstrichSansBlack";
+    margin-bottom: 20px;
+}
+.comments h4{
+    font-family: "ProximaNovaBold";
+    font-size: 16px;
+    color: #2a323a;
+}
+h5{
+    font-family: "OstrichSansBlack";
+    font-size: 24px;
+    color: #f39c12;
+    margin-bottom: 25px;
+}
+/*typo*/
+
+/*--------------------- header --------------------*/
+.k-header{
+    background-color: #2a323a;
+    padding-top: 60px;
+    padding-bottom: 205px;
+    z-index: 0;
+}
+
+.k-header nav{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+}
+.k-header nav h1,
+.k-header nav a{
+    display: inline-block;
+    margin-left: 70px;
+}
+.k-header nav a:active,
+.k-header nav a:hover{
+    color: #f39c12;;
+}
+
+
+.k-header nav a{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.60);
+    text-decoration: none;
+    font-family: "ProximaNovaBold";
+    transition: color .5s ease;
+}
+.k-header nav h1{
+     color: #f39c12;
+     text-transform: uppercase;
+     font-family: "ProximaNovaBold";
+ }
+.banner img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 390px;
+}
+.footer:before,
+.testimonials:before,
+.description:before,
+.register:before{
+    content: "";
+    height: 350px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+/* --------------------description----------- */
+.description:before{
+    transform: skewY(-10deg);
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+    top:0px;
+}
+.description{
+    position: relative;
+    z-index: 1000;
+}
+.description>.description-content>.wrapper p{
+    font-family: "ProximaNovaRegular";
+    font-size: 16px;
+    z-index: 1000;
+}
+.description-content p + p{
+    margin-top: 32px;
+}
+.description-content{
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    z-index: 999;
+}
+.description-content:last-child{
+    margin-bottom: 125px;
+}
+.description-content + .description-content{
+    margin-top: 150px;
+}
+.description-content>.wrapper{
+    padding-left: 60px;
+}
+.text-box,
+.img-box{
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 20px;
+}
+.text-box{
+    width: 460px;
+    text-align: left;
+}
+.img-box{
+    width: 300px;
+}
+/*-----------------register -----------*/
+.register:before{
+    transform: skewY(10deg);
+    -webkit-transform: skewY(10deg);
+    -moz-transform: skewY(10deg);
+    -o-transform: skewY(10deg);
+    -ms-transform: skewY(10deg);
+    top:-250px;
+    z-index: 100;
+}
+.register{
+    background-color: #2a323a;
+    position: relative;
+    z-index: 1;
+    padding-top: 250px;
+    overflow: hidden;
+}
+
+.register p{
+    padding-top: 40px;
+    margin: 0 60px;
+    font-family: "OstrichSansBlack";
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.circle{
+    margin:-600px auto 0 auto;
+    z-index: -100   ;
+    width: 800px;
+    height: 800px;
+    background: #000;
+    -moz-border-radius: 800px;
+    -webkit-border-radius: 800px;
+    border-radius: 800px;
+}
+.btn:active,
+.btn:hover,
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #2ecc71;
+    font-family: "ProximaNovaBold";
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 2px solid #2ecc71;
+    border-radius: 30px;
+    padding: 20px 60px;
+    margin: 30px 0;
+    transition: color 1s ease, background-color 1s ease;
+}
+.btn:active,
+.btn:hover.btn{
+    color: #fff;
+    background-color:#2ecc71;
+}
+/*-----------------testimonials -----------*/
+.testimonials:before{
+    transform: skewY(5deg);
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -o-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    top:-250px;
+    z-index: 100;
+    background-color: #2a323a;
+}
+.testimonials{
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+    padding-top: 150px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-top: 250px;
+}
+.testimonials h3{
+    font-size: 30px;
+    font-family: "OstrichSansBlack";
+    margin-bottom: 65px;
+}
+.testimonials-block {
+    width: 100%;
+    display: inline-block;
+    z-index: 1000;
+}
+.testimonials-block:only-child{
+    margin-top: 25%;
+}
+.testimonials-block+.testimonials-block{
+    margin-top: 80px;
+}
+.testimonials-col-left+.testimonials-col-right{
+    margin-left: 180px;
+}
+.testimonials-col-left,
+.testimonials-col-right{
+    width: 380px;
+    text-align: right;
+    float: left;
+    vertical-align: middle;
+}
+.testimonials-block p{
+    font-family: "ProximaNovaRegular";
+    text-align: left;
+    position: relative;
+    margin-bottom: 50px;
+}
+.testimonials-block p:after{
+    content: "";
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    bottom:-25px;
+    border-bottom: 3px solid #a1a1a1;
+    border-right: 3px solid #a1a1a1;
+    z-index: 100;
+}
+.testimonials-block p:before{
+    content: "";
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    left: 160px;
+    bottom:-41px;
+    border-bottom: 3px solid #a1a1a1;
+    border-right: 3px solid #a1a1a1;
+    z-index: 9000;
+    background-color: #fff;
+    transform: skewY(45deg);
+}
+.comments{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+.comments:before{
+    content: "";
+    width:50px;
+    height: 50px;
+    left: -70px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #000;
+    position: absolute;
+    z-index: 9999;
+}
+.comments span{
+    font-family: "ProximaNovaRegular";
+    font-size: 14px;
+    color: #898989;
+}
+/*-----------------footer -----------*/
+.footer:before{
+    transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    top:-125px;
+    z-index: 100;
+    background-color: #fff;
+}
+.footer{
+    background: url("../img/map.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 100px;
+}
+.footer-overlay .wrapper{
+    height: 100%;
+}
+.footer-overlay{
+    padding-top: 220px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(42, 50, 58, 0.91);
+}
+.footer-col-left,
+.footer-col-mid,
+.footer-col-right{
+    float: left;
+}
+.footer-col-mid{
+    margin-left: 100px;
+}
+.footer-col-mid,
+.footer-col-left{
+    width: 220px;
+    position: relative;
+}
+.footer-col-mid:after{
+    right:40px;
+}
+.footer-col-left:after{
+    right: -30px;
+}
+.footer-col-mid:after,
+.footer-col-left:after{
+    content: "";
+    position: absolute;
+    height: 190px;
+    top: 0;
+    width: 1px;
+    border-right: 1px dotted rgba(255, 255, 255, .5);
+    width: 60px;
+}
+.footer-col-right {
+    width: 380px;
+    margin-left: 20px;
+}
+.footer-menu,
+.footer p{
+    font-family: "ProximaNovaRegular";
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 1s ease;
+}
+.footer a:hover,
+.footer a:active{
+    color: #2ecc71;
+}
+.footer img{
+    width: 18px;
+    margin-left: 100px;
+}
+.footer-menu{
+    margin-top: 0;
+    padding-top: 0;
+}
+.footer>.footer-overlay>.wrapper>.footer-col-right>.email-form>.email-enter{
+    font-family: "ProximaNovaRegular";
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.51);
+}
+.email-form{
+    line-height: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.footer-col-right>p{
+    font-family: "OstrichSansMedium";
+    font-size: 30px;
+    margin-bottom: 80px;
+}
+.copy{
+    font-family: "ProximaNovaRegular";
+    font-size: 14px;
+    margin-bottom: 70px!important;
+}
+.newbie{
+    font-family: "ProximaNovaBold";
+}
+.data{
+    color: #2ecc71;
 }
